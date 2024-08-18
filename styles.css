@@ -3,20 +3,21 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #f0f4f8;
     color: #333;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
     color: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 header p {
@@ -24,7 +25,7 @@ header p {
 }
 
 header a {
-    color: #fff;
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -32,56 +33,69 @@ section {
     padding: 2rem;
     margin: 2rem auto;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 80%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 section h2 {
     text-align: center;
-    color: #333;
+    color: #3a6073;
+    margin-bottom: 1rem;
+    position: relative;
 }
 
-.job {
-    margin-bottom: 2rem;
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #ffd700;
+    margin: 0.5rem auto;
+    border-radius: 2px;
 }
 
-.job h3, .job h4 {
-    margin: 0.5rem 0;
+.profile-img {
+    display: block;
+    margin: 1rem auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.colorful-section {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
 }
 
-ul li {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAABJ0AAASdAHeZh94AAAA60lEQVQ4y2NgoBZg0uX9A8MWFxcQBw5cSEpa0Keh0s3EVsGPjFo+gxSLgVwcHhAEBlZ2dn2DQ6GoGVNpB0TSV/6lszt0AwMDUywaGwAC+0Hn2ihcoW0nBAYGC2qAKTVoDiDeG5ga2sr/g0mBqZxAyMjCwMDAxkEodnd3V1UGdnpwZrXWpiGQSkgxtAKJUBMmuZEFOACVWQW0BhpZoSi3AKIUE0AzGCV6goSJJQ2dXV1fRmIyMjBhCsAKLUFgAJIACaGheD5DGKoAAAAASUVORK5CYII=') no-repeat left center;
-    padding-left: 20px;
-    margin-bottom: 10px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.skill-item {
+    background: #3a6073;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
 }
 
 footer {
-    background: #333;
+    background: #3a6073;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-section {
-    animation: slideIn 1s ease-in-out;
 }
