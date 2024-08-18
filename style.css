@@ -56,7 +56,7 @@ ul {
 }
 
 ul li {
-    background: url('bullet.png') no-repeat left center;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAABJ0AAASdAHeZh94AAAA60lEQVQ4y2NgoBZg0uX9A8MWFxcQBw5cSEpa0Keh0s3EVsGPjFo+gxSLgVwcHhAEBlZ2dn2DQ6GoGVNpB0TSV/6lszt0AwMDUywaGwAC+0Hn2ihcoW0nBAYGC2qAKTVoDiDeG5ga2sr/g0mBqZxAyMjCwMDAxkEodnd3V1UGdnpwZrXWpiGQSkgxtAKJUBMmuZEFOACVWQW0BhpZoSi3AKIUE0AzGCV6goSJJQ2dXV1fRmIyMjBhCsAKLUFgAJIACaGheD5DGKoAAAAASUVORK5CYII=') no-repeat left center;
     padding-left: 20px;
     margin-bottom: 10px;
 }
