@@ -1,117 +1,87 @@
-/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: #f4f4f4;
+    color: #333;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header Styles */
 header {
-    background-color: #35424a;
-    color: #ffffff;
-    padding: 30px 0;
-    border-bottom: 3px solid #e8491d;
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.5rem;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 18px;
+    margin: 0.5rem 0;
 }
 
-/* Section Styles */
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
 section {
-    background-color: #ffffff;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    border-bottom: 3px solid #e8491d;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 28px;
+    text-align: center;
     color: #333;
 }
 
-section p, section ul {
-    font-size: 16px;
-    line-height: 1.6;
+.job {
+    margin-bottom: 2rem;
+}
+
+.job h3, .job h4 {
+    margin: 0.5rem 0;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #cccccc;
+    background: url('bullet.png') no-repeat left center;
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
 
-ul li:last-child {
-    border-bottom: none;
-}
-
-/* Work Experience and Education Section Styles */
-section h3 {
-    font-size: 22px;
-    color: #e8491d;
-    margin-top: 20px;
-}
-
-section ul {
-    margin-left: 20px;
-}
-
-/* Footer Styles */
 footer {
-    background-color: #35424a;
-    color: #ffffff;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-    margin: 0;
-    font-size: 16px;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    section h3 {
-        font-size: 20px;
-    }
+section {
+    animation: slideIn 1s ease-in-out;
 }
