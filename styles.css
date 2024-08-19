@@ -1,43 +1,34 @@
-/* General styles */
+/* Basic Reset */
+body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and header styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background: url('data:image/jpeg;base64,BASE64_ENCODED_BACKGROUND_IMAGE') no-repeat center center fixed;
-    background-size: cover;
+    padding: 0 20px;
 }
 
-/* Header styles */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
     text-align: center;
-    position: relative;
-}
-
-header img {
-    max-height: 50px; /* Adjust based on your logo size */
-    vertical-align: middle;
-    content: url('data:image/png;base64,BASE64_ENCODED_LOGO_IMAGE'); /* Inline base64 logo */
+    padding: 20px;
+    background: #f4f4f4;
+    border-bottom: 2px solid #ddd;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    display: inline;
-    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+    margin-bottom: 5px;
 }
 
 header a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
@@ -45,99 +36,71 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* Section styles */
+/* Section styling */
 section {
+    margin: 20px 0;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Job cards styling */
+.job-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
     background: #fff;
-    padding: 1rem;
-    margin: 1rem auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
-    border: 1px solid #ddd; /* Adds border */
 }
 
-/* Section headings */
-section h2 {
+.job-card a.job-title {
+    display: block;
+    font-weight: bold;
     color: #333;
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    text-decoration: none;
+    margin-bottom: 5px;
 }
 
-/* Job entries */
-.job {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow */
+.job-card a.job-title:hover {
+    text-decoration: underline;
 }
 
-.job h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #444;
+.job-card .job-duration {
+    color: #777;
+    margin-bottom: 10px;
 }
 
-.job h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.job p {
-    margin: 0.5rem 0;
-}
-
-.job ul {
+.job-card .job-responsibilities ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.job ul li {
-    margin-bottom: 0.5rem;
-}
-
-/* Skill container to align items */
+/* Skills section styling */
 .skill-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Adjust spacing between circles */
-    justify-content: center;
-    margin-top: 1rem;
+    gap: 10px;
 }
 
-/* Style for each skill */
 .skill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px; /* Diameter of the circle */
-    height: 100px; /* Diameter of the circle */
-    background: #4CAF50; /* Background color */
-    color: white;
-    border-radius: 50%; /* Makes the element circular */
-    font-size: 0.9rem;
-    font-weight: bold;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    max-width: 150px;
     text-align: center;
-    line-height: 1.2;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow */
 }
 
-.skill:hover {
-    background-color: #45a049; /* Darker shade on hover */
+/* Education and certifications styling */
+section p, section ul {
+    margin-bottom: 10px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .job {
-        flex-direction: column;
-    }
-    
-    .skill-container {
-        flex-direction: column;
-    }
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
