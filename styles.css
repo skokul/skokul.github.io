@@ -5,19 +5,30 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f4f4f4;
+    background: url('data:image/jpeg;base64,BASE64_ENCODED_BACKGROUND_IMAGE') no-repeat center center fixed;
+    background-size: cover;
 }
 
+/* Header styles */
 header {
     background: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
+    position: relative;
+}
+
+header img {
+    max-height: 50px; /* Adjust based on your logo size */
+    vertical-align: middle;
+    content: url('data:image/png;base64,BASE64_ENCODED_LOGO_IMAGE'); /* Inline base64 logo */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    display: inline;
+    vertical-align: middle;
 }
 
 header p {
@@ -41,8 +52,11 @@ section {
     margin: 1rem auto;
     border-radius: 8px;
     max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    border: 1px solid #ddd; /* Adds border */
 }
 
+/* Section headings */
 section h2 {
     color: #333;
     border-bottom: 2px solid #333;
@@ -55,6 +69,10 @@ section h2 {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow */
 }
 
 .job h3 {
@@ -88,6 +106,7 @@ section h2 {
     flex-wrap: wrap;
     gap: 1rem; /* Adjust spacing between circles */
     justify-content: center;
+    margin-top: 1rem;
 }
 
 /* Style for each skill */
@@ -104,4 +123,21 @@ section h2 {
     font-weight: bold;
     text-align: center;
     line-height: 1.2;
-    transition: background-color
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.skill:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .job {
+        flex-direction: column;
+    }
+    
+    .skill-container {
+        flex-direction: column;
+    }
+}
