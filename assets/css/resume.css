@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+}
+
+.resume-h2 {
+  color: #0b1220;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-h3 {
+  color: #0b1220;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.resume-meta {
+  color: rgba(71, 85, 105, 0.95);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.resume-role {
+  margin-top: 0.15rem;
+  color: rgba(71, 85, 105, 0.95);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.resume-list {
+  padding-left: 1.1rem;
+  color: rgba(30, 41, 59, 0.86);
+}
+
+.resume-list li {
+  margin: 0.35rem 0;
+}
+
+.resume-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: white;
+  padding: 1rem 1rem;
+  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06);
+}
+
+.resume-card-title {
+  color: #0b1220;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+}
+
+.resume-card-text {
+  margin-top: 0.4rem;
+  color: rgba(30, 41, 59, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.resume-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.9);
+  padding: 0.35rem 0.6rem;
+  color: rgba(51, 65, 85, 0.95);
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+
+.resume-link {
+  color: rgba(11, 18, 32, 0.95);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  text-decoration: underline;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+
+  .shadow-sm,
+  .shadow-soft {
+    box-shadow: none !important;
+  }
+}
+
