@@ -1,0 +1,12 @@
+{
+  "name": "skokul-portfolio",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css --minify"
+  }
+}
+
