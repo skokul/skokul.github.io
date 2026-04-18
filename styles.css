@@ -5,6 +5,9 @@
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .bg-grid {
@@ -19,15 +22,19 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  transition: color 150ms ease, opacity 150ms ease;
+  border-radius: 0.9rem;
+  padding: 0.4rem 0.65rem;
+  transition: color 150ms ease, background 150ms ease, opacity 150ms ease;
 }
 
 .nav-link:hover {
   color: rgba(11, 18, 32, 0.95);
+  background: rgba(241, 245, 249, 0.9);
 }
 
 .nav-link.is-active {
   color: rgba(11, 18, 32, 0.95);
+  background: rgba(241, 245, 249, 1);
 }
 
 .mobile-link {
@@ -65,6 +72,7 @@ body {
   padding: 1.25rem;
   box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06);
   transition: transform 200ms ease, box-shadow 200ms ease;
+  will-change: transform;
 }
 
 .metric-card:hover {
@@ -98,6 +106,7 @@ body {
   padding: 1.1rem 1.1rem;
   box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06);
   transition: transform 200ms ease, box-shadow 200ms ease;
+  will-change: transform;
 }
 
 .why-card:hover {
@@ -140,6 +149,7 @@ body {
   padding: 1.25rem;
   box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06);
   transition: transform 200ms ease, box-shadow 200ms ease;
+  will-change: transform;
 }
 
 .framework-card:hover {
