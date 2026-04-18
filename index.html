@@ -20,17 +20,15 @@
     <link rel="stylesheet" href="styles.css" />
 
     <script>
-      tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: {
-                ink: "#0B1220",
-                haze: "#F6F7FB",
-              },
-              boxShadow: {
-                soft: "0 1px 2px rgba(10,18,32,0.06), 0 12px 40px rgba(10,18,32,0.08)",
-              },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0B1220",
+              haze: "#F6F7FB",
+            },
+            boxShadow: {
+              soft: "0 1px 2px rgba(10,18,32,0.06), 0 12px 40px rgba(10,18,32,0.08)",
             },
           },
         },
@@ -42,6 +40,7 @@
   <body class="h-full text-slate-900 antialiased selection:bg-slate-900 selection:text-white">
     <a
       href="#content"
+      data-no-smooth
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-soft"
     >
       Skip to content
@@ -65,6 +64,16 @@
         </nav>
 
         <div class="flex items-center gap-2">
+          <button
+            class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-2 text-ink shadow-sm transition hover:bg-slate-50 sm:hidden"
+            type="button"
+            data-mobile-menu-trigger
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open menu</span>
+            <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/bars-3.svg" />
+          </button>
           <a
             href="#case-studies"
             class="hidden rounded-xl bg-ink px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:inline-flex"
@@ -81,7 +90,7 @@
       </div>
     </header>
 
-    <main id="content">
+    <main id="content" tabindex="-1">
       <!-- HERO -->
       <section id="top" class="relative overflow-hidden bg-haze">
         <div class="bg-grid absolute inset-0 opacity-[0.35]"></div>
@@ -94,9 +103,11 @@
               Product Owner • AI-first execution • Enterprise delivery
             </p>
 
-            <h1 class="text-balance text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
+            <h1 class="text-balance text-4xl font-semibold tracking-tight text-ink sm:text-6xl">Kokul Shanmugam</h1>
+
+            <p class="mt-4 max-w-3xl text-balance text-2xl font-semibold tracking-tight text-slate-800 sm:text-3xl">
               Product Owner driving AI-powered platforms, enterprise delivery, and scalable digital transformation
-            </h1>
+            </p>
 
             <p class="mt-5 max-w-2xl text-pretty text-lg text-slate-700 sm:text-xl">
               5+ years | SaaS, EdTech, e-Governance, Fintech | 10+ global clients
@@ -157,7 +168,7 @@
               <p class="metric-note">QBRs, roadmap clarity, stakeholder trust</p>
             </div>
             <div class="metric-card">
-              <p class="metric-kpi">₹10 Cr <span class="metric-unit">Portfolio</span></p>
+              <p class="metric-kpi">Rs.10 Crore <span class="metric-unit">Portfolio</span></p>
               <p class="metric-note">12+ initiatives across 5 departments</p>
             </div>
             <div class="metric-card">
@@ -235,6 +246,10 @@
           </div>
           <div class="lg:col-span-8">
             <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <p class="max-w-3xl text-slate-700">
+                I define the problem clearly, pick measurable outcomes, and move fast with high-quality execution. My job is to turn ambiguity
+                into decisions: what to build, what to cut, and how to ship with confidence.
+              </p>
               <ol class="grid gap-5 sm:grid-cols-2">
                 <li class="think-item">
                   <p class="think-title">Problem-first</p>
@@ -346,6 +361,7 @@
                   class="case-toggle"
                   type="button"
                   data-accordion-trigger
+                  id="case-toggle-bosch"
                   aria-expanded="false"
                   aria-controls="case-bosch"
                 >
@@ -359,7 +375,7 @@
                 </button>
               </div>
 
-              <div id="case-bosch" class="accordion-panel" data-accordion-panel>
+              <div id="case-bosch" class="accordion-panel" data-accordion-panel role="region" aria-labelledby="case-toggle-bosch">
                 <div class="pt-6">
                   <div class="grid gap-4 lg:grid-cols-3">
                     <div class="insight-card">
@@ -391,22 +407,60 @@
                     <div class="mt-4 grid gap-5 lg:grid-cols-12" data-timeline>
                       <div class="lg:col-span-5">
                         <div class="space-y-2" role="tablist" aria-label="Bosch LMS timeline">
-                          <button class="timeline-tab is-active" type="button" data-timeline-tab="0" role="tab" aria-selected="true">
+                          <button
+                            class="timeline-tab is-active"
+                            id="bosch-step-0"
+                            type="button"
+                            data-timeline-tab="0"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="bosch-panel-0"
+                          >
                             1. Diagnose & align
                           </button>
-                          <button class="timeline-tab" type="button" data-timeline-tab="1" role="tab" aria-selected="false">
+                          <button
+                            class="timeline-tab"
+                            id="bosch-step-1"
+                            type="button"
+                            data-timeline-tab="1"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="bosch-panel-1"
+                          >
                             2. Design integration
                           </button>
-                          <button class="timeline-tab" type="button" data-timeline-tab="2" role="tab" aria-selected="false">
+                          <button
+                            class="timeline-tab"
+                            id="bosch-step-2"
+                            type="button"
+                            data-timeline-tab="2"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="bosch-panel-2"
+                          >
                             3. Rollout safely
                           </button>
-                          <button class="timeline-tab" type="button" data-timeline-tab="3" role="tab" aria-selected="false">
+                          <button
+                            class="timeline-tab"
+                            id="bosch-step-3"
+                            type="button"
+                            data-timeline-tab="3"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="bosch-panel-3"
+                          >
                             4. Measure & scale
                           </button>
                         </div>
                       </div>
                       <div class="lg:col-span-7">
-                        <div class="timeline-panel is-active" data-timeline-panel="0" role="tabpanel">
+                        <div
+                          class="timeline-panel is-active"
+                          id="bosch-panel-0"
+                          data-timeline-panel="0"
+                          role="tabpanel"
+                          aria-labelledby="bosch-step-0"
+                        >
                           <p class="panel-title">Diagnose & align</p>
                           <ul class="panel-list">
                             <li>Mapped the compliance funnel (assigned → attended → certified → reported).</li>
@@ -414,7 +468,14 @@
                             <li>Aligned stakeholders on a single source of truth and success criteria.</li>
                           </ul>
                         </div>
-                        <div class="timeline-panel" data-timeline-panel="1" role="tabpanel" hidden>
+                        <div
+                          class="timeline-panel"
+                          id="bosch-panel-1"
+                          data-timeline-panel="1"
+                          role="tabpanel"
+                          aria-labelledby="bosch-step-1"
+                          hidden
+                        >
                           <p class="panel-title">Design integration</p>
                           <ul class="panel-list">
                             <li>Connected LMS training completion with attendance signals for auditability.</li>
@@ -422,7 +483,14 @@
                             <li>Designed role-based views so managers act on exceptions quickly.</li>
                           </ul>
                         </div>
-                        <div class="timeline-panel" data-timeline-panel="2" role="tabpanel" hidden>
+                        <div
+                          class="timeline-panel"
+                          id="bosch-panel-2"
+                          data-timeline-panel="2"
+                          role="tabpanel"
+                          aria-labelledby="bosch-step-2"
+                          hidden
+                        >
                           <p class="panel-title">Rollout safely</p>
                           <ul class="panel-list">
                             <li>Piloted with one plant, documented issues, and stabilized the flow.</li>
@@ -430,7 +498,14 @@
                             <li>Created a repeatable rollout checklist for each plant.</li>
                           </ul>
                         </div>
-                        <div class="timeline-panel" data-timeline-panel="3" role="tabpanel" hidden>
+                        <div
+                          class="timeline-panel"
+                          id="bosch-panel-3"
+                          data-timeline-panel="3"
+                          role="tabpanel"
+                          aria-labelledby="bosch-step-3"
+                          hidden
+                        >
                           <p class="panel-title">Measure & scale</p>
                           <ul class="panel-list">
                             <li>Tracked compliance weekly and ran “friction reviews” on drop-offs.</li>
@@ -478,6 +553,7 @@
                   class="case-toggle"
                   type="button"
                   data-accordion-trigger
+                  id="case-toggle-ai"
                   aria-expanded="false"
                   aria-controls="case-ai"
                 >
@@ -491,7 +567,7 @@
                 </button>
               </div>
 
-              <div id="case-ai" class="accordion-panel" data-accordion-panel>
+              <div id="case-ai" class="accordion-panel" data-accordion-panel role="region" aria-labelledby="case-toggle-ai">
                 <div class="pt-6">
                   <div class="grid gap-4 lg:grid-cols-3">
                     <div class="insight-card">
@@ -514,10 +590,19 @@
                         <h4 class="text-base font-semibold text-ink">View decision process</h4>
                         <p class="mt-1 text-sm text-slate-600">Toggle to see constraints, reasoning, and trade-offs.</p>
                       </div>
-                      <button class="toggle-btn" type="button" data-toggle-target="#ai-decision" aria-expanded="false">Show</button>
+                      <button
+                        class="toggle-btn"
+                        id="ai-decision-toggle"
+                        type="button"
+                        data-toggle-target="#ai-decision"
+                        aria-expanded="false"
+                        aria-controls="ai-decision"
+                      >
+                        Show
+                      </button>
                     </div>
 
-                    <div id="ai-decision" class="toggle-panel mt-5" hidden>
+                    <div id="ai-decision" class="toggle-panel mt-5" role="region" aria-labelledby="ai-decision-toggle" hidden>
                       <div class="grid gap-4 lg:grid-cols-2">
                         <div class="insight-card">
                           <p class="insight-title">Constraints</p>
@@ -572,6 +657,7 @@
                   class="case-toggle"
                   type="button"
                   data-accordion-trigger
+                  id="case-toggle-onboarding"
                   aria-expanded="false"
                   aria-controls="case-onboarding"
                 >
@@ -585,7 +671,13 @@
                 </button>
               </div>
 
-              <div id="case-onboarding" class="accordion-panel" data-accordion-panel>
+              <div
+                id="case-onboarding"
+                class="accordion-panel"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="case-toggle-onboarding"
+              >
                 <div class="pt-6">
                   <div class="grid gap-4 lg:grid-cols-3">
                     <div class="insight-card">
@@ -615,6 +707,7 @@
                       <div
                         class="inline-flex rounded-2xl border border-slate-200 bg-white p-1 shadow-sm"
                         data-toggle-group="onboarding"
+                        aria-label="Onboarding comparison toggle"
                       >
                         <button class="seg-btn is-active" type="button" data-toggle-value="before" aria-pressed="true">Before</button>
                         <button class="seg-btn" type="button" data-toggle-value="after" aria-pressed="false">After</button>
@@ -706,8 +799,10 @@
             <div class="skill-card">
               <p class="skill-title">Product</p>
               <div class="mt-3 flex flex-wrap gap-2">
-                <span class="tag">Roadmapping</span><span class="tag">Prioritization</span><span class="tag">Discovery</span
-                ><span class="tag">Release planning</span>
+                <span class="tag">Roadmapping</span>
+                <span class="tag">Prioritization</span>
+                <span class="tag">Discovery</span>
+                <span class="tag">Release planning</span>
               </div>
             </div>
             <div class="skill-card">
@@ -719,8 +814,11 @@
             <div class="skill-card">
               <p class="skill-title">Tools</p>
               <div class="mt-3 flex flex-wrap gap-2">
-                <span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Postman</span><span class="tag">SQL</span
-                ><span class="tag">Power BI</span>
+                <span class="tag">Jira</span>
+                <span class="tag">Confluence</span>
+                <span class="tag">Postman</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
               </div>
             </div>
             <div class="skill-card">
@@ -773,6 +871,32 @@
         </div>
       </section>
     </main>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="absolute inset-0 bg-slate-900/20 backdrop-blur-sm" data-mobile-menu-close></div>
+      <div class="relative mx-auto max-w-sm px-4 pt-20">
+        <div class="rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold tracking-tight text-ink">Menu</p>
+            <button
+              class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-2 text-ink shadow-sm transition hover:bg-slate-50"
+              type="button"
+              data-mobile-menu-close
+            >
+              <span class="sr-only">Close menu</span>
+              <img alt="" class="h-5 w-5" src="https://unpkg.com/heroicons@2.1.5/24/solid/x-mark.svg" />
+            </button>
+          </div>
+          <nav class="mt-4 grid gap-2" aria-label="Mobile">
+            <a class="mobile-link" href="#impact">Impact</a>
+            <a class="mobile-link" href="#why">Why me</a>
+            <a class="mobile-link" href="#frameworks">Frameworks</a>
+            <a class="mobile-link" href="#case-studies">Case studies</a>
+            <a class="mobile-link" href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="assets/js/main.js"></script>
   </body>
