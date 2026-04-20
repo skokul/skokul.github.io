@@ -6,16 +6,23 @@
     <title>Kokul Shanmugam — Product Portfolio</title>
     <meta
       name="description"
-      content="Product Owner driving AI-powered platforms, enterprise delivery, and scalable digital transformation. Case studies, decision frameworks, and outcomes."
+      content="Product Owner driving AI-powered platforms, enterprise delivery, and scalable digital transformation. Projects, decision frameworks, and measurable outcomes."
     />
     <meta name="theme-color" content="#0B1220" />
 
     <meta property="og:title" content="Kokul Shanmugam — Product Portfolio" />
     <meta
       property="og:description"
-      content="Case studies, decision frameworks, and outcomes: AI dashboards, onboarding automation, and enterprise LMS delivery."
+      content="Projects, decision frameworks, and outcomes: AI dashboards, onboarding automation, and enterprise LMS delivery."
     />
     <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -40,11 +47,11 @@
         </a>
 
         <nav class="hidden items-center gap-6 sm:flex" aria-label="Primary">
-          <a class="nav-link" href="#impact" data-nav-link>Impact</a>
-          <a class="nav-link" href="#why" data-nav-link>Why me</a>
-          <a class="nav-link" href="#frameworks" data-nav-link>Frameworks</a>
-          <a class="nav-link" href="#case-studies" data-nav-link>Case studies</a>
-          <a class="nav-link" href="resume.html">Resume</a>
+          <a class="nav-link" href="#about" data-nav-link>About</a>
+          <a class="nav-link" href="#projects" data-nav-link>Projects</a>
+          <a class="nav-link" href="#experience" data-nav-link>Experience</a>
+          <a class="nav-link" href="#skills" data-nav-link>Skills</a>
+          <a class="nav-link" href="#education" data-nav-link>Education</a>
           <a class="nav-link" href="#contact" data-nav-link>Contact</a>
         </nav>
 
@@ -60,10 +67,16 @@
             <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/bars-3.svg" />
           </button>
           <a
-            href="#case-studies"
+            href="resume.html?print=1"
+            class="hidden rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink shadow-sm transition hover:bg-slate-50 sm:inline-flex"
+          >
+            Download resume
+          </a>
+          <a
+            href="#projects"
             class="hidden rounded-xl bg-ink px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:inline-flex"
           >
-            View case studies
+            View projects
           </a>
           <a
             href="mailto:kokuls@zohomail.com"
@@ -80,7 +93,8 @@
       <section id="top" class="relative overflow-hidden bg-haze">
         <div class="bg-grid absolute inset-0 opacity-[0.35]"></div>
         <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <div class="reveal">
+          <div class="reveal grid items-center gap-10 lg:grid-cols-12">
+            <div class="lg:col-span-7">
             <p
               class="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700"
             >
@@ -103,15 +117,22 @@
 
             <div class="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="#case-studies"
+                href="#projects"
                 class="inline-flex items-center gap-2 rounded-2xl bg-ink px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:opacity-95"
               >
-                View Case Studies
+                View Projects
                 <img
                   alt=""
                   class="h-5 w-5 opacity-90"
                   src="https://unpkg.com/heroicons@2.1.5/24/solid/arrow-right.svg"
                 />
+              </a>
+              <a
+                href="resume.html?print=1"
+                class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-50"
+              >
+                Download Resume
+                <img alt="" class="h-5 w-5" src="https://unpkg.com/heroicons@2.1.5/24/solid/arrow-down-tray.svg" />
               </a>
               <a
                 href="#contact"
@@ -129,18 +150,67 @@
               <span class="text-slate-300">•</span>
               <span>Chennai, India</span>
             </div>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+                <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-slate-900/5 blur-2xl"></div>
+                <div class="absolute -bottom-12 -left-12 h-44 w-44 rounded-full bg-slate-900/5 blur-2xl"></div>
+
+                <div class="flex items-center justify-between">
+                  <p class="text-sm font-semibold tracking-tight text-ink">Portfolio snapshot</p>
+                  <span class="chip">Outcome-first</span>
+                </div>
+
+                <div class="mt-5 grid gap-4">
+                  <div class="flex items-center gap-4">
+                    <img
+                      class="h-14 w-14 rounded-2xl border border-slate-200 bg-haze p-2"
+                      src="assets/img/profile.svg"
+                      alt="Profile illustration"
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <div>
+                      <p class="text-sm font-semibold text-ink">What I do</p>
+                      <p class="mt-1 text-sm text-slate-600">Turn ambiguity into decisions, shipped outcomes, and adoption.</p>
+                    </div>
+                  </div>
+
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="mini-metric">
+                      <p class="mini-kpi">90%</p>
+                      <p class="mini-label">Retention</p>
+                    </div>
+                    <div class="mini-metric">
+                      <p class="mini-kpi">700K+</p>
+                      <p class="mini-label">Users scale</p>
+                    </div>
+                    <div class="mini-metric">
+                      <p class="mini-kpi">Rs.10 Cr</p>
+                      <p class="mini-label">Portfolio</p>
+                    </div>
+                    <div class="mini-metric">
+                      <p class="mini-kpi">&lt; 8 hrs</p>
+                      <p class="mini-label">AI dashboard</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- KEY IMPACT -->
-      <section id="impact" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <section id="about" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div class="reveal">
           <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Key impact, fast.</h2>
+              <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">About (impact-first)</h2>
               <p class="mt-2 max-w-2xl text-slate-600">
-                The outcomes I’m hired for: adoption, retention, delivery velocity, and measurable business value.
+                Product Owner and Business Analyst with 5+ years across SaaS, EdTech, e-Governance and Fintech. I ship outcomes: adoption,
+                retention, compliance, and cycle-time reduction.
               </p>
             </div>
             <p class="text-sm text-slate-500">Signal-first portfolio • under 10 seconds</p>
@@ -329,12 +399,12 @@
         </div>
       </section>
 
-      <!-- CASE STUDIES -->
-      <section id="case-studies" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <!-- PROJECTS -->
+      <section id="projects" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div class="reveal">
           <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Interactive case studies</h2>
+              <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Projects (interactive)</h2>
               <p class="mt-2 max-w-2xl text-slate-600">
                 Three projects that show how I think, decide, and deliver under real constraints.
               </p>
@@ -348,8 +418,19 @@
               <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p class="case-eyebrow">CASE 01</p>
-                  <h3 class="case-title">Bosch LMS — compliance lift at scale</h3>
-                  <p class="case-subtitle">Compliance improved from 70% → 90%, then scaled across plants.</p>
+                  <div class="flex items-start gap-3">
+                    <img
+                      class="mt-1 h-10 w-10 rounded-2xl border border-slate-200 bg-haze p-2"
+                      src="assets/img/projects/bosch.svg"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3 class="case-title">Bosch LMS — compliance lift at scale</h3>
+                      <p class="case-subtitle">Compliance improved from 70% → 90%, then scaled across plants.</p>
+                    </div>
+                  </div>
                   <div class="mt-3 flex flex-wrap gap-2">
                     <span class="chip">Enterprise LMS</span>
                     <span class="chip">Integration</span>
@@ -540,8 +621,19 @@
               <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p class="case-eyebrow">CASE 02</p>
-                  <h3 class="case-title">AI Dashboard — built in &lt; 8 hours, 1/20th cost</h3>
-                  <p class="case-subtitle">No dev dependency. Fast iteration using AI-assisted execution.</p>
+                  <div class="flex items-start gap-3">
+                    <img
+                      class="mt-1 h-10 w-10 rounded-2xl border border-slate-200 bg-haze p-2"
+                      src="assets/img/projects/ai-dashboard.svg"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3 class="case-title">AI Dashboard — built in &lt; 8 hours, 1/20th cost</h3>
+                      <p class="case-subtitle">No dev dependency. Fast iteration using AI-assisted execution.</p>
+                    </div>
+                  </div>
                   <div class="mt-3 flex flex-wrap gap-2">
                     <span class="chip">Analytics</span>
                     <span class="chip">AI-assisted build</span>
@@ -644,8 +736,19 @@
               <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p class="case-eyebrow">CASE 03</p>
-                  <h3 class="case-title">Onboarding automation — 2 days → hours</h3>
-                  <p class="case-subtitle">Bulk uploads + rule-based enrollment to remove manual ops bottlenecks.</p>
+                  <div class="flex items-start gap-3">
+                    <img
+                      class="mt-1 h-10 w-10 rounded-2xl border border-slate-200 bg-haze p-2"
+                      src="assets/img/projects/onboarding.svg"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3 class="case-title">Onboarding automation — 2 days → hours</h3>
+                      <p class="case-subtitle">Bulk uploads + rule-based enrollment to remove manual ops bottlenecks.</p>
+                    </div>
+                  </div>
                   <div class="mt-3 flex flex-wrap gap-2">
                     <span class="chip">Automation</span>
                     <span class="chip">Ops efficiency</span>
@@ -815,6 +918,37 @@
           <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Skills</h2>
           <p class="mt-2 max-w-2xl text-slate-600">Minimal, grouped, and tuned for product execution.</p>
 
+          <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+              <div class="flex items-center gap-3">
+                <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/squares-2x2.svg" />
+                <p class="text-sm font-semibold text-ink">Product craft</p>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Roadmaps, prioritization, release confidence.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+              <div class="flex items-center gap-3">
+                <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/document-text.svg" />
+                <p class="text-sm font-semibold text-ink">Business analysis</p>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Workshops, BPMN, PRDs, UAT, change.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+              <div class="flex items-center gap-3">
+                <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/wrench-screwdriver.svg" />
+                <p class="text-sm font-semibold text-ink">Execution tools</p>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Jira, SQL, Power BI, AWS, GitHub.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+              <div class="flex items-center gap-3">
+                <img alt="" class="h-6 w-6" src="https://unpkg.com/heroicons@2.1.5/24/solid/sparkles.svg" />
+                <p class="text-sm font-semibold text-ink">AI acceleration</p>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Prototype faster, validate, ship with leverage.</p>
+            </div>
+          </div>
+
           <div class="mt-8 grid gap-4 lg:grid-cols-4">
             <div class="skill-card">
               <p class="skill-title">Product</p>
@@ -878,6 +1012,44 @@
         </div>
       </section>
 
+      <!-- EDUCATION -->
+      <section id="education" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div class="reveal grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Education</h2>
+            <p class="mt-2 text-slate-600">Strong engineering foundation, built for product execution.</p>
+          </div>
+          <div class="lg:col-span-8">
+            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div class="flex items-start gap-3">
+                  <img
+                    class="mt-1 h-10 w-10 rounded-2xl border border-slate-200 bg-haze p-2"
+                    src="https://unpkg.com/heroicons@2.1.5/24/solid/academic-cap.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <p class="text-base font-semibold tracking-tight text-ink">Bachelor of Computer Science and Engineering</p>
+                    <p class="mt-1 text-sm text-slate-700">Panimalar Institute of Technology, Anna University</p>
+                    <p class="mt-1 text-sm text-slate-500">2013 – 2017 • CGPA: 8/10</p>
+                  </div>
+                </div>
+
+                <a
+                  href="resume.html"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-ink shadow-sm transition hover:bg-slate-50"
+                >
+                  Open resume
+                  <img alt="" class="h-5 w-5" src="https://unpkg.com/heroicons@2.1.5/24/solid/document-text.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section id="contact" class="bg-haze">
         <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -935,12 +1107,13 @@
             </button>
           </div>
           <nav class="mt-4 grid gap-2" aria-label="Mobile">
-            <a class="mobile-link" href="#impact">Impact</a>
-            <a class="mobile-link" href="#why">Why me</a>
-            <a class="mobile-link" href="#frameworks">Frameworks</a>
-            <a class="mobile-link" href="#case-studies">Case studies</a>
-            <a class="mobile-link" href="resume.html">Resume</a>
+            <a class="mobile-link" href="#about">About</a>
+            <a class="mobile-link" href="#projects">Projects</a>
+            <a class="mobile-link" href="#experience">Experience</a>
+            <a class="mobile-link" href="#skills">Skills</a>
+            <a class="mobile-link" href="#education">Education</a>
             <a class="mobile-link" href="#contact">Contact</a>
+            <a class="mobile-link" href="resume.html">Resume</a>
           </nav>
         </div>
       </div>
