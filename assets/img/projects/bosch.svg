@@ -1,25 +1,26 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="10" y1="8" x2="72" y2="76" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F172A" stop-opacity="0.10" />
-      <stop offset="1" stop-color="#0F172A" stop-opacity="0.03" />
+      <stop stop-color="#0B1220" stop-opacity="0.10" />
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.03" />
     </linearGradient>
   </defs>
   <rect x="6" y="6" width="68" height="68" rx="18" fill="url(#bg)" />
-  <path d="M25 27h30" stroke="#0F172A" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" />
-  <path d="M25 38h22" stroke="#0F172A" stroke-opacity="0.38" stroke-width="4" stroke-linecap="round" />
+  <path d="M25 27h30" stroke="#0B1220" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" />
+  <path d="M25 38h22" stroke="#0B1220" stroke-opacity="0.38" stroke-width="4" stroke-linecap="round" />
   <path
     d="M25 54c4-5 9-8 15-8s11 3 15 8"
-    stroke="#0F172A"
+    stroke="#0B1220"
     stroke-opacity="0.38"
     stroke-width="4"
     stroke-linecap="round"
   />
   <path
     d="M54 50l4 4 9-10"
-    stroke="#F59E0B"
+    stroke="#10B981"
     stroke-width="4"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
 </svg>
+

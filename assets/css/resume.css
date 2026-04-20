@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  background: var(--bg);
+  background: #f6f7fb;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
   text-rendering: optimizeLegibility;
@@ -17,14 +17,14 @@ body {
 }
 
 main {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: 1.75rem;
-  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06), 0 22px 70px rgba(10, 18, 32, 0.08);
 }
 
 .resume-h2 {
-  color: var(--text-primary);
+  color: #0b1220;
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -38,25 +38,25 @@ main {
   content: "";
   height: 1px;
   flex: 1;
-  background: var(--border);
+  background: rgba(148, 163, 184, 0.55);
 }
 
 .resume-h3 {
-  color: var(--text-primary);
+  color: #0b1220;
   font-size: 1.08rem;
   font-weight: 800;
   letter-spacing: -0.01em;
 }
 
 .resume-meta {
-  color: var(--text-secondary);
+  color: rgba(71, 85, 105, 0.95);
   font-size: 0.875rem;
   font-weight: 650;
 }
 
 .resume-role {
   margin-top: 0.15rem;
-  color: var(--text-secondary);
+  color: rgba(71, 85, 105, 0.95);
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -64,7 +64,7 @@ main {
 .resume-list {
   list-style: disc;
   padding-left: 1.1rem;
-  color: var(--text-secondary);
+  color: rgba(30, 41, 59, 0.86);
   line-height: 1.6;
 }
 
@@ -73,32 +73,33 @@ main {
 }
 
 .resume-list li::marker {
-  color: var(--text-secondary);
+  color: rgba(71, 85, 105, 0.7);
 }
 
 .resume-card {
   border-radius: 1.25rem;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: white;
   padding: 1rem 1rem;
-  transition: all 0.25s ease;
+  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .resume-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(148, 163, 184, 0.55);
+  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06), 0 18px 55px rgba(10, 18, 32, 0.09);
 }
 
 .resume-card-title {
-  color: var(--text-primary);
+  color: #0b1220;
   font-weight: 850;
   letter-spacing: -0.01em;
 }
 
 .resume-card-text {
   margin-top: 0.4rem;
-  color: var(--text-secondary);
+  color: rgba(30, 41, 59, 0.86);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -107,34 +108,34 @@ main {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.9);
   padding: 0.35rem 0.6rem;
-  color: var(--accent);
+  color: rgba(51, 65, 85, 0.95);
   font-size: 0.85rem;
   font-weight: 750;
-  transition: all 0.25s ease;
+  transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
 }
 
 .resume-chip:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
+  transform: translateY(-1px);
+  background: rgba(241, 245, 249, 1);
+  border-color: rgba(148, 163, 184, 0.55);
 }
 
 .resume-link {
-  color: var(--primary);
+  color: rgba(11, 18, 32, 0.95);
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: opacity 150ms ease, text-decoration-color 150ms ease;
 }
 
 .resume-link:hover {
-  color: var(--secondary);
   text-decoration: underline;
 }
 
 .resume-link:focus-visible {
-  outline: 3px solid rgba(6, 182, 212, 0.35);
+  outline: 3px solid rgba(15, 23, 42, 0.25);
   outline-offset: 3px;
   border-radius: 0.5rem;
 }
@@ -160,7 +161,7 @@ main {
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    background: var(--surface) !important;
+    background: white !important;
   }
 
   main {
