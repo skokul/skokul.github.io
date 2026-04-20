@@ -1,0 +1,82 @@
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --primary: #4F46E5;
+  --secondary: #06B6D4;
+  --accent: #F59E0B;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border: #E2E8F0;
+}
+
+html,
+body {
+  background: var(--bg) !important;
+  color: var(--text-primary);
+}
+
+::selection {
+  background: var(--primary) !important;
+  color: var(--surface) !important;
+}
+
+a {
+  color: var(--primary);
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+*:focus-visible {
+  outline: 3px solid rgba(6, 182, 212, 0.35);
+  outline-offset: 3px;
+}
+
+/* Map Tailwind slate utilities to the fixed design tokens (strict palette). */
+.bg-white {
+  background-color: var(--surface) !important;
+}
+
+html.bg-white {
+  background-color: var(--bg) !important;
+}
+
+.bg-slate-50,
+.bg-slate-100 {
+  background-color: var(--bg) !important;
+}
+
+.text-white {
+  color: var(--surface) !important;
+}
+
+.border-slate-200 {
+  border-color: var(--border) !important;
+}
+
+.border-slate-200\/60 {
+  border-color: rgba(226, 232, 240, 0.6) !important;
+}
+
+.text-slate-900,
+.text-slate-800 {
+  color: var(--text-primary) !important;
+}
+
+.text-slate-700,
+.text-slate-600,
+.text-slate-500,
+.text-slate-400,
+.text-slate-300 {
+  color: var(--text-secondary) !important;
+}
+
+.selection\:bg-slate-900::selection {
+  background: var(--primary) !important;
+}
+
+.selection\:text-white::selection {
+  color: var(--surface) !important;
+}
