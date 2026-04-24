@@ -1,6 +1,6 @@
 # skokul.github.io
 
-Premium static product portfolio for Kokul Shanmugam. The site is designed to read like a top-tier Product Owner portfolio, not a resume dump.
+Premium static product portfolio for Kokul Shanmugam.
 
 ## What is included
 
@@ -27,5 +27,6 @@ Premium static product portfolio for Kokul Shanmugam. The site is designed to re
 ## Maintenance
 
 - When content, layout, or interactions change in this folder, update this README in the same change.
+- Keep page titles, meta tags, and section copy aligned with the current positioning.
 - Typography, spacing, contrast, and card emphasis are centralized in `styles.css`; keep this README aligned with future visual refinements.
 - Keep `assets/css/tailwind.css` and the HTML files aligned with any new utility classes you introduce.
