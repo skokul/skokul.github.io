@@ -509,8 +509,7 @@ details[open] summary {
 
 .mobile-menu {
   border-top: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
+  background: white;
 }
 
 @keyframes fadeIn {
