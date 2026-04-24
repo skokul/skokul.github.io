@@ -3,6 +3,9 @@ import { qsa, qs, on } from "../lib/dom.js";
 export function initToggleTargets() {
   const triggers = qsa("[data-toggle-target]");
   for (const trigger of triggers) {
+    const closedLabel = trigger.dataset.toggleLabelClosed || "Show";
+    const openLabel = trigger.dataset.toggleLabelOpen || "Hide";
+
     on(trigger, "click", () => {
       const selector = trigger.dataset.toggleTarget;
       if (!selector) return;
@@ -12,7 +15,7 @@ export function initToggleTargets() {
       const isOpen = !panel.hidden;
       panel.hidden = isOpen;
       trigger.setAttribute("aria-expanded", (!isOpen).toString());
-      trigger.textContent = isOpen ? "Show" : "Hide";
+      trigger.textContent = isOpen ? closedLabel : openLabel;
     });
   }
 }
@@ -51,4 +54,3 @@ export function initToggleGroups() {
     }
   }
 }
-

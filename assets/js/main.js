@@ -1,5 +1,4 @@
 import { initScrollReveal } from "./modules/scrollReveal.js";
-import { initAccordions } from "./modules/accordion.js";
 import { initTimelines } from "./modules/timeline.js";
 import { initToggleTargets, initToggleGroups } from "./modules/toggles.js";
 import { initNavigation } from "./modules/nav.js";
@@ -13,7 +12,6 @@ function setFooterYear() {
 
 setFooterYear();
 initScrollReveal();
-initAccordions();
 initTimelines();
 initToggleTargets();
 initToggleGroups();

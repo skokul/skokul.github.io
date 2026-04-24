@@ -1,51 +1,29 @@
 # skokul.github.io
 
-Personal portfolio and resume site for Kokul Shanmugam. The repository contains a static landing page, a resume page, and a small Tailwind build pipeline for styling.
+Premium static product portfolio for Kokul Shanmugam. The site is designed to read like a top-tier Product Owner portfolio, not a resume dump.
 
 ## What is included
 
-- `index.html` - portfolio homepage with hero, impact, frameworks, case studies, experience, skills, and contact sections.
-- `resume.html` - printable resume page.
-- `assets/css/` - Tailwind source and compiled CSS plus resume-specific styles.
-- `assets/js/` - page behavior split into small modules for navigation, accordions, scroll reveal, timelines, and toggles.
-- `styles.css` - additional site styling layered on top of Tailwind.
+- `index.html` - primary portfolio experience with hero, impact, frameworks, product builds, case studies, experience, skills, and contact.
+- `resume.html` - condensed resume page for direct sharing.
+- `styles.css` - custom premium styling layered on top of Tailwind utilities.
+- `assets/js/` - modular vanilla JavaScript for navigation, scroll reveal, accordions, timelines, and toggles.
+- `assets/css/` - committed Tailwind output plus resume-specific styles.
 
-## Development
+## Site structure
 
-Install dependencies:
-
-```bash
-npm install
-```
-
-Rebuild the Tailwind stylesheet after changing classes or layout:
-
-```bash
-npm run build:css
-```
-
-Open `index.html` directly in a browser, or serve the folder with any static file server if you want local navigation and asset loading behavior.
-
-## Project structure
-
-```text
-.
-|-- index.html
-|-- resume.html
-|-- styles.css
-|-- tailwind.config.js
-`-- assets
-    |-- css
-    |   |-- resume.css
-    |   |-- tailwind.input.css
-    |   `-- tailwind.css
-    `-- js
-        |-- main.js
-        |-- lib
-        `-- modules
-```
+- Hero with recruiter-facing positioning
+- Key impact cards
+- Why hire me
+- How I think as a Product Owner
+- Decision frameworks
+- Featured product builds
+- Interactive case studies
+- Condensed experience
+- Skill groups
+- Contact section
 
 ## Maintenance
 
-- If you update site content, layout, scripts, or styling in this folder, update this README in the same change.
-- Keep `assets/css/tailwind.css` in sync with `assets/css/tailwind.input.css` and the HTML files by running the Tailwind build script.
+- When content, layout, or interactions change in this folder, update this README in the same change.
+- Keep `assets/css/tailwind.css` and the HTML files aligned with any new utility classes you introduce.

@@ -44,17 +44,16 @@ export function initAccordions() {
     const triggers = qsa("[data-accordion-trigger]", accordion);
     const panels = qsa("[data-accordion-panel]", accordion);
 
-    for (const panel of panels) {
-      panel.hidden = true;
-      panel.dataset.open = "false";
-      panel.style.maxHeight = "0px";
-    }
-
     for (const trigger of triggers) {
       const panelId = trigger.getAttribute("aria-controls");
       if (!panelId) continue;
       const panel = document.getElementById(panelId);
       if (!panel) continue;
+
+      const isOpen = trigger.getAttribute("aria-expanded") === "true";
+      panel.dataset.open = isOpen ? "true" : "false";
+      panel.hidden = !isOpen;
+      panel.style.maxHeight = isOpen ? "none" : "0px";
 
       on(trigger, "click", () => {
         const isOpen = trigger.getAttribute("aria-expanded") === "true";
