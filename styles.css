@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --bg: #f4f7fb;
-  --surface: rgba(255, 255, 255, 0.9);
+  --bg: #f8fafc;
+  --surface: #ffffff;
   --surface-strong: #ffffff;
-  --line: rgba(148, 163, 184, 0.34);
+  --line: #e2e8f0;
   --text: #0b1220;
-  --muted: rgba(71, 85, 105, 0.92);
-  --soft: rgba(241, 245, 249, 0.95);
+  --muted: #475569;
+  --soft: #f8fafc;
   --accent: #0b1220;
   --accent-soft: rgba(11, 18, 32, 0.06);
 }
@@ -22,37 +22,19 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:
-    radial-gradient(circle at top left, rgba(15, 23, 42, 0.06), transparent 34%),
-    radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.06), transparent 22%),
-    linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
 .hero-title {
-  font-size: clamp(3rem, 5vw, 5rem);
-  line-height: 0.9;
-  letter-spacing: -0.07em;
-  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
   text-wrap: balance;
-  color: var(--text);
 }
 
 .page-shell {
   position: relative;
   overflow: clip;
-}
-
-.page-shell::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(circle at top, rgba(0, 0, 0, 0.7), transparent 72%);
-  opacity: 0.55;
 }
 
 .nav-link {
@@ -88,9 +70,9 @@ summary:focus-visible {
 
 .mobile-link {
   display: block;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.92);
+  background: white;
   padding: 0.9rem 1rem;
   font-weight: 650;
   color: var(--text);
@@ -104,7 +86,7 @@ summary:focus-visible {
 }
 
 .menu-trigger {
-  border-radius: 0.95rem;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
   background: white;
   padding: 0.6rem;
@@ -128,13 +110,12 @@ summary:focus-visible {
 .surface-card {
   border: 1px solid var(--line);
   background: var(--surface);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06), 0 20px 60px rgba(10, 18, 32, 0.05);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 32px rgba(15, 23, 42, 0.05);
 }
 
 .hero-card {
-  border-radius: 2rem;
-  padding: clamp(1.5rem, 2.2vw, 2.25rem);
+  border-radius: 0.75rem;
+  padding: clamp(1.5rem, 2vw, 2rem);
 }
 
 .card-hover,
@@ -159,17 +140,17 @@ summary:focus-visible {
 .skill-card:hover,
 .contact-row:hover {
   transform: translateY(-3px);
-  border-color: rgba(148, 163, 184, 0.54);
-  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06), 0 24px 70px rgba(10, 18, 32, 0.08);
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 18px 40px rgba(15, 23, 42, 0.08);
 }
 
 .metric-card,
 .why-card {
-  padding: clamp(1.25rem, 1.8vw, 1.75rem);
+  padding: clamp(1.5rem, 2vw, 1.75rem);
 }
 
 .surface-card {
-  padding: clamp(1.15rem, 1.8vw, 2rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
 }
 
 .metric-card,
@@ -180,11 +161,11 @@ summary:focus-visible {
 .experience-card,
 .skill-card,
 .contact-row {
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
 }
 
 .metric-number {
-  font-size: clamp(1.75rem, 2.4vw, 2.6rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 800;
   letter-spacing: -0.05em;
   color: var(--text);
@@ -196,22 +177,22 @@ summary:focus-visible {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(100, 116, 139, 0.96);
+  color: #64748b;
 }
 
 .section-title {
-  font-size: clamp(1.95rem, 2.5vw, 3.1rem);
-  line-height: 0.98;
-  letter-spacing: -0.06em;
-  font-weight: 800;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 600;
   text-wrap: balance;
   color: var(--text);
 }
 
 .section-copy {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .primary-btn,
@@ -231,7 +212,7 @@ summary:focus-visible {
 .primary-btn {
   background: var(--accent);
   color: white;
-  padding: 0.95rem 1.35rem;
+  padding: 0.9rem 1.35rem;
   box-shadow: 0 12px 32px rgba(11, 18, 32, 0.16);
 }
 
@@ -246,16 +227,16 @@ summary:focus-visible {
   border: 1px solid var(--line);
   background: white;
   color: var(--text);
-  padding: 0.95rem 1.35rem;
+  padding: 0.9rem 1.35rem;
 }
 
 .pill {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  border-radius: 999px;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.92);
+  background: white;
   padding: 0.45rem 0.8rem;
   color: var(--text);
   font-size: 0.85rem;
@@ -292,23 +273,23 @@ summary:focus-visible {
 .experience-title,
 .skill-title {
   color: var(--text);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .framework-title,
 .product-title,
 .case-title,
 .experience-title {
-  font-size: 1.12rem;
-  font-weight: 800;
-  line-height: 1.25;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .product-tagline,
 .case-subtitle,
 .experience-meta,
 .skill-note {
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   color: var(--muted);
   line-height: 1.7;
 }
@@ -317,9 +298,9 @@ summary:focus-visible {
 .tag {
   display: inline-flex;
   align-items: center;
-  border-radius: 999px;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
-  background: rgba(248, 250, 252, 0.92);
+  background: #f8fafc;
   padding: 0.35rem 0.65rem;
   color: rgba(51, 65, 85, 0.96);
   font-size: 0.8rem;
@@ -331,7 +312,7 @@ summary:focus-visible {
 .case-card,
 .experience-card,
 .skill-card {
-  padding: clamp(1.35rem, 2vw, 1.9rem);
+  padding: clamp(1.5rem, 2vw, 1.75rem);
 }
 
 .case-card details {
@@ -345,10 +326,10 @@ summary:focus-visible {
   gap: 1rem;
   cursor: pointer;
   list-style: none;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
-  background: rgba(248, 250, 252, 0.82);
-  padding: 0.95rem 1.1rem;
+  background: white;
+  padding: 1rem 1.1rem;
   font-weight: 750;
   color: var(--text);
 }
@@ -411,24 +392,26 @@ details[open] summary {
 .decision-panel,
 .compare-card,
 .surface-panel {
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
-  background: rgba(248, 250, 252, 0.88);
-  padding: 1.15rem;
+  background: white;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .compare-panel {
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
   background: white;
-  padding: 1.1rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .timeline-tab {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
+  border-radius: 0.75rem;
   border: 1px solid var(--line);
   background: white;
   padding: 0.8rem 1rem;
@@ -442,8 +425,8 @@ details[open] summary {
 
 .timeline-tab:hover {
   transform: translateY(-1px);
-  border-color: rgba(148, 163, 184, 0.54);
-  box-shadow: 0 1px 2px rgba(10, 18, 32, 0.06), 0 12px 24px rgba(10, 18, 32, 0.06);
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 24px rgba(15, 23, 42, 0.06);
 }
 
 .timeline-tab.is-active {
@@ -528,14 +511,6 @@ details[open] summary {
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
-}
-
-.page-gradient {
-  position: absolute;
-  inset: auto 0 0;
-  height: 12rem;
-  background: linear-gradient(180deg, rgba(244, 247, 251, 0), rgba(244, 247, 251, 0.95));
-  pointer-events: none;
 }
 
 @keyframes fadeIn {
