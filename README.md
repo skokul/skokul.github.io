@@ -27,4 +27,5 @@ Premium static product portfolio for Kokul Shanmugam. The site is designed to re
 ## Maintenance
 
 - When content, layout, or interactions change in this folder, update this README in the same change.
+- Typography, spacing, and card emphasis are centralized in `styles.css`; keep this README aligned with future visual refinements.
 - Keep `assets/css/tailwind.css` and the HTML files aligned with any new utility classes you introduce.
