@@ -5,7 +5,7 @@ Premium static product portfolio for Kokul Shanmugam. The site is designed to re
 ## What is included
 
 - `index.html` - primary portfolio experience with hero, impact, frameworks, product builds, case studies, experience, skills, and contact.
-- `resume.html` - condensed resume page for direct sharing.
+- `assets/resume/resume.pdf` - browser-viewable resume PDF with direct download support.
 - `styles.css` - custom premium styling layered on top of Tailwind utilities.
 - `assets/js/` - modular vanilla JavaScript for navigation, scroll reveal, accordions, timelines, and toggles.
 - `assets/css/` - committed Tailwind output plus resume-specific styles.
@@ -19,6 +19,7 @@ Premium static product portfolio for Kokul Shanmugam. The site is designed to re
 - Decision frameworks
 - Featured product builds
 - Interactive case studies
+- Resume PDF viewer and download buttons
 - Condensed experience
 - Skill groups
 - Contact section
